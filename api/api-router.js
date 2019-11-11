@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/hash', (req,res) => {
-  const credentials = req.body;
+  const credentials = req.body.password;
 
   const hash = bcrypt.hashSync(credentials.password, 14);
 
